@@ -39,9 +39,11 @@ if(isset($_SESSION['usuario'])){
 
 					<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
 						<option value="A">Selecciona Categoria</option>
+
 						<?php while($ver=mysqli_fetch_row($result)): ?>
 							<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 						<?php endwhile; ?>
+						
 					</select>
 
 
@@ -94,14 +96,16 @@ if(isset($_SESSION['usuario'])){
 
 						<select class="form-control input-sm" id="categoriaSelectU" name="categoriaSelectU">
 							<option value="A">Selecciona Categoria</option>
+
 							<?php 
-							$sql="SELECT id_categoria,nombreCategoria
-							from categorias";
+							$sql="SELECT id_categoria,nombreCategoria FROM categorias";
 							$result=mysqli_query($conexion,$sql);
 							?>
+
 							<?php while($ver=mysqli_fetch_row($result)): ?>
 								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 							<?php endwhile; ?>
+
 						</select>
 
 						<label>Nombre</label>
@@ -165,7 +169,7 @@ if(isset($_SESSION['usuario'])){
 						$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
 						alert("Eliminado");
 					}else{
-						alert("No se pudo eliminar :(");
+						alert("No se pudo eliminar");
 					}
 				}
 			});
@@ -223,7 +227,7 @@ if(isset($_SESSION['usuario'])){
 
 				success:function(r){
 					
-					alert(r)
+					//alert(r)
 					if(r == 1){
 						$('#frmArticulos')[0].reset();
 						$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");

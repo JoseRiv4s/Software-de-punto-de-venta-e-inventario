@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Categorias</title>
 
     <?php require_once "menu.php"; ?>
 
@@ -118,7 +118,7 @@ if (isset($_SESSION['usuario'])) {
 
 						$('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
 					
-						alert("Categoria Agregada con exito");
+						alert("Categoria Agregada");
 					}else {
 						alert("No se agrego la categoria");
 					}
@@ -145,7 +145,7 @@ if (isset($_SESSION['usuario'])) {
 				success:function(r){
 					if(r==1){
 						$('#tablaCategoriaLoad').load("categorias/tablaCategorias.php");
-						alert("Actualizado con exito");
+						alert("Actualizado");
 					}else{
 						alert("no se pudo actaulizar");
 					}
@@ -172,7 +172,7 @@ if (isset($_SESSION['usuario'])) {
 				success:function(r){
 					if(r==1){
 						$('#tablaCategoriaLoad').load("categorias/tablaCategorias.php");
-						alert("Eliminado con exito!!");
+						alert("Eliminado");
 					}else{
 						alert("No se pudo eliminar");
 					}

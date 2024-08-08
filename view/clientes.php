@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clientes</title>
 
     <?php  require_once"menu.php"; ?>
 
@@ -139,7 +139,7 @@
 				success:function(r){
 					if(r==1){
 						$('#tablaClientesLoad').load("clientes/tablaClientes.php");
-						alertify.success("Eliminado con exito");
+						alertify.success("Eliminado");
 					}else{
 						alertify.error("No se pudo eliminar");
 					}

@@ -106,7 +106,7 @@
                 data:datos,
                 url:"procesos/regLogin/login.php",
                 success:function(r){
-                    alert(r)
+                    //alert(r)
                     if(r==1){
                         window.location="view/inicio.php";
                     }else{

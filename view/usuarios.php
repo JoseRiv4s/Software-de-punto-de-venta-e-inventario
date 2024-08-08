@@ -3,7 +3,7 @@
 
     session_start();
 
-    if(isset($_SESSION['usuario'])){
+    if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
     
 ?>
 
@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Usuarios</title>
 
     <?php  require_once"menu.php"; ?>
 
@@ -135,9 +135,9 @@
 				success:function(r){
 					if(r==1){
 						$('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
-						alert("Eliminado con exito!!");
+						alert("Eliminado con exito");
 					}else{
-						alert("No se pudo eliminar :(");
+						alert("No se pudo eliminar");
 					}
 				}
 			});
@@ -162,9 +162,9 @@
 
 					if(r==1){
 						$('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
-						alertify.success("Actualizado con exito :D");
+						alertify.success("Actualizado");
 					}else{
-						alertify.error("No se pudo actualizar :(");
+						alertify.error("No se pudo actualizar");
 					}
 				}
 			});
